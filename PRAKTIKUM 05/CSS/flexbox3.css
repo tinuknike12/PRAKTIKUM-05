@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.box {
+    flex: 1;
+    height: 35px;
+    background-color: #ddd;
+    border: 3px solid black;
+    border-radius: 5px;
+}

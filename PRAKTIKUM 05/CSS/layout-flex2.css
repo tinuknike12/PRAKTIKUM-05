@@ -1,0 +1,157 @@
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* MAIN CONTAINER */
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 15px;
+
+    background-color: #ffb6b6;
+
+    display: grid;
+
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 15% 1fr 15%;
+
+    grid-template-areas:
+        "header header"
+        "aside article"
+        "footer footer";
+
+    gap: 10px;
+}
+
+
+/* HEADER */
+header {
+    grid-area: header;
+
+    background-color: #80cbc4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ASIDE */
+aside {
+    grid-area: aside;
+
+    background-color: #61b6b5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ARTICLE */
+article {
+    grid-area: article;
+
+    background-color: #f77979;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 10px;
+    gap: 10px;
+
+    color: white;
+}
+
+
+/* IMAGE CONTAINER */
+.images {
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+}
+
+
+/* IMAGE BOX */
+.image-box {
+    flex: 1;
+
+    height: 100px;
+
+    background-color: #ddd;
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+.image-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+
+    background-color: #80cbc4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+
+    .container {
+        min-height: 100vh;
+
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 80px 1fr 80px;
+
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .images {
+        gap: 5px;
+    }
+
+    .image-box {
+        height: 70px;
+    }
+
+}
